@@ -24,9 +24,10 @@ int decimal_to_binary(int num)
     while (num > 0)
     {
         int digit = (num & 1);
-        int binarynum = digit * (pow(10, i++)) + binarynum;
+        binarynum = digit * pow(10, i++) + binarynum;
         num = num >> 1;
     }
+    return binarynum;
 }
 
 int main()
